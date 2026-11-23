@@ -1,0 +1,46 @@
+Subject: Web Programming Quiz 2 - Campus Library (JSP) - Evann Andre Bloutin (5999261014)
+
+Dear Sir/Madam,
+
+Please find attached my Web Programming Quiz 2 submission. I worked on it individually.
+
+PROJECT
+Campus Library is a library management website built with Jakarta Servlets and JSP (Jakarta Server Pages), JSTL, JDBC and an
+embedded H2 database. It continues my midterm project (Laravel) and was rewritten in Java following your feedback.
+
+WHAT IS INCLUDED
+1. campus-library.zip - the complete source code, the libraries and ready-to-run scripts.
+2. Report.pdf - database design (conceptual and physical models), the list of features with screenshots and explanations,
+   a dedicated analysis/evaluation section, a dedicated conclusion, and the work distribution (Evann Bloutin 100%).
+
+LINKS
+Live website: [LIVE URL]
+Source code: [GITHUB URL]
+
+HOW TO RUN IT LOCALLY (Java 17 or newer, nothing else to install)
+1. Unzip campus-library.zip.
+2. Run ./run.sh (Linux/macOS) or run.bat (Windows).
+3. Open http://localhost:8080 and log in with:
+   - librarian: admin@library.test / password
+   - member:    member@library.test / password
+
+FEATURES (9 CRUD modules)
+Categories, books, members, loans (borrow / renew / return / fines), reviews, favorites, reservations (queue),
+announcements, and profile. Also registration/login/logout, a dashboard with statistics and charts, search, filters,
+sorting and pagination.
+
+CHANGES SINCE THE MIDTERM (based on the feedback)
+- Design: new visual identity, generated book covers (and real covers from the ISBN when online), charts, responsive layout.
+- Analysis: a dedicated "Analysis and evaluation" section explaining the design choices and the test results.
+- Conclusion: a dedicated "Conclusion" section.
+- The database diagrams (MCD and MPD) are now drawn in the report.
+
+TESTING
+An automatic test script (scripts/smoke-test.sh, 91 checks) and a manual checklist are described in the README and in the
+report appendix.
+
+Thank you for your time and for the feedback on the midterm.
+
+Best regards,
+Evann Andre Bloutin
+Student ID: 5999261014

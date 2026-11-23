@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee" version="3.1">
+  <description>Campus Library EL functions</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>cl</short-name>
+  <uri>https://campuslibrary.example/tags</uri>
+  <function><name>h</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String h(java.lang.Object)</function-signature></function>
+  <function><name>date</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String date(java.lang.Object)</function-signature></function>
+  <function><name>dateTime</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String dateTime(java.lang.Object)</function-signature></function>
+  <function><name>money</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String money(long)</function-signature></function>
+  <function><name>pct</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String pct(double, double)</function-signature></function>
+  <function><name>stars</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String stars(double)</function-signature></function>
+  <function><name>enc</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String enc(java.lang.Object)</function-signature></function>
+  <function><name>truncate</name><function-class>com.campuslibrary.util.Fmt</function-class>
+    <function-signature>java.lang.String truncate(java.lang.String, int)</function-signature></function>
+</taglib>

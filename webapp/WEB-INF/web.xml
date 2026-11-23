@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="6.0">
+  <display-name>Campus Library</display-name>
+
+  <!-- JSP engine: compile pages with the Eclipse JDT compiler (lib/eclipse-jdt-core.jar) -->
+  <servlet>
+    <servlet-name>jsp</servlet-name>
+    <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+    <init-param><param-name>compilerSourceVM</param-name><param-value>17</param-value></init-param>
+    <init-param><param-name>compilerTargetVM</param-name><param-value>17</param-value></init-param>
+    <init-param><param-name>fork</param-name><param-value>false</param-value></init-param>
+    <init-param><param-name>development</param-name><param-value>true</param-value></init-param>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+
+  <!-- Every page request goes through the front controller (MVC) -->
+  <servlet>
+    <servlet-name>front</servlet-name>
+    <servlet-class>com.campuslibrary.web.FrontServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>front</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <!-- Static files (CSS, JS, fonts) are served by Tomcat's default servlet -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/assets/*</url-pattern>
+  </servlet-mapping>
+
+  <session-config>
+    <session-timeout>60</session-timeout>
+    <cookie-config><http-only>true</http-only></cookie-config>
+  </session-config>
+
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <page-encoding>UTF-8</page-encoding>
+      <trim-directive-whitespaces>false</trim-directive-whitespaces>
+      <include-prelude>/WEB-INF/views/_taglibs.jspf</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
+
+  <mime-mapping><extension>ttf</extension><mime-type>font/ttf</mime-type></mime-mapping>
+  <mime-mapping><extension>svg</extension><mime-type>image/svg+xml</mime-type></mime-mapping>
+</web-app>
